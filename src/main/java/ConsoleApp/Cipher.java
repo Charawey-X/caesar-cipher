@@ -11,9 +11,16 @@ public class Cipher {
         }
 
         String cipherText ="";
-        int length = message.length();
+        String text=message.toUpperCase();
+        int length = text.length();
         for (int i=0; i<length;i++){
-            char ch = message.charAt(i);
+            char ch = text.charAt(i);
+            if (Character.isAlphabetic(ch)){
+
+            }
+            else {
+                cipherText+=ch;
+            }
         }
         return cipherText;
     }
