@@ -17,6 +17,21 @@ public class CmdInterface {
          *System.out.println("Decrypted message: "+deciphered);
          *
          */
+        System.out.println( "+-------------------------------------+" );
+        System.out.println( "|                                     |" );
+        System.out.println( "|            CAESAR CIPHER            |" );
+        System.out.println( "|                                     |" );
+        System.out.println( "|             CHOOSE ONE:             |" );
+        System.out.println( "|                                     |" );
+        System.out.println( "|           (1) Encryption            |" );
+        System.out.println( "|           (2) Decryption            |" );
+        System.out.println( "|                                     |" );
+        System.out.println( "|        To choose Encryption:        |" );
+        System.out.println( "|               ENTER 1               |" );
+        System.out.println( "|        To choose Decryption:        |" );
+        System.out.println( "|               ENTER 2               |" );
+        System.out.println( "|                                     |" );
+        System.out.println( "+-------------------------------------+" );
 
     }
 }
