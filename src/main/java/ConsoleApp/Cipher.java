@@ -16,7 +16,13 @@ public class Cipher {
         for (int i=0; i<length;i++){
             char ch = text.charAt(i);
             if (Character.isAlphabetic(ch)){
-
+                char c =(char)(ch+shift);
+                if (c > 'Z'){
+                    cipherText+=(char)(ch -(26-shift));
+                }
+                else {
+                    cipherText+=c;
+                }
             }
             else {
                 cipherText+=ch;
