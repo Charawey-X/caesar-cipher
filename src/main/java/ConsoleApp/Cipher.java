@@ -12,6 +12,9 @@ public class Cipher {
 
         String cipherText ="";
         int length = message.length();
+        for (int i=0; i<length;i++){
+            char ch = message.charAt(i);
+        }
         return cipherText;
     }
 }
