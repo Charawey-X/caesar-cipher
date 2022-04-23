@@ -11,18 +11,30 @@ public class Cipher {
         }
 
         String cipherText ="";
-        String text=message.toUpperCase();
-        int length = text.length();
+        int length = message.length();
         for (int i=0; i<length;i++){
-            char ch = text.charAt(i);
+            char ch = message.charAt(i);
             if (Character.isAlphabetic(ch)){
-                char c =(char)(ch+shift);
-                if (c > 'Z'){
-                    cipherText+=(char)(ch -(26-shift));
+                if (Character.isLowerCase(ch)){
+                    char c =(char)(ch+shift);
+                    if (c > 'z'){
+                        cipherText+=(char)(ch -(26-shift));
+                    }
+                    else {
+                        cipherText+=c;
+                    }
                 }
-                else {
-                    cipherText+=c;
+                else if (Character.isUpperCase(ch)) {
+                    char c =(char)(ch+shift);
+                    if (c > 'Z'){
+                        cipherText+=(char)(ch -(26-shift));
+                    }
+                    else {
+                        cipherText+=c;
+                    }
+
                 }
+
             }
             else {
                 cipherText+=ch;
