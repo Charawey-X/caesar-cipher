@@ -37,6 +37,14 @@ public class CmdInterface {
 
         System.out.print("ENTER: ");
         int choice = scanner.nextInt();
+        if (choice ==1){
+            System.out.println("               ENCRYPTION              ");
+        } else if (choice==2) {
+            System.out.println("               DECRYPTION              ");
+        }
+        else {
+            System.out.println("            CHOICE IS INVALID          ");
+        }
 
 
     }
