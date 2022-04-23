@@ -33,5 +33,11 @@ public class CmdInterface {
         System.out.println( "|                                     |" );
         System.out.println( "+-------------------------------------+" );
 
+        System.out.println("");
+
+        System.out.print("ENTER: ");
+        int choice = scanner.nextInt();
+
+
     }
 }
