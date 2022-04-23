@@ -39,13 +39,34 @@ public class CmdInterface {
         int choice = scanner.nextInt();
         if (choice ==1){
             System.out.println("               ENCRYPTION              ");
+            System.out.println("Encrypted message: " + cipherEncryption());
+
         } else if (choice==2) {
             System.out.println("               DECRYPTION              ");
+            System.out.println("Enter Message: ");
+            String text = scanner.nextLine();
+
+            System.out.println("Enter Key");
+            int key = scanner.nextInt();
+            String deciphered = decrypt(text,key);
+            System.out.println("Decrypted Message: " + deciphered);
         }
         else {
             System.out.println("            CHOICE IS INVALID          ");
         }
 
+
+    }
+
+    public static String cipherEncryption(){
+        scanner.nextLine();  // discard newline
+        System.out.println("             Enter Message:            ");
+        String text;
+        text = scanner.nextLine();
+        System.out.println("               Enter Key:              ");
+        int key = scanner.nextInt();
+        String ciphered = encrypt(text,key);
+        return ciphered;
 
     }
 }
