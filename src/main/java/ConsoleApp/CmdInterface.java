@@ -34,20 +34,29 @@ public class CmdInterface {
         System.out.println( "+-------------------------------------+" );
 
         System.out.println("");
+        int end=0;
 
-        System.out.print("ENTER: ");
-        int choice = scanner.nextInt();
-        if (choice ==1){
-            System.out.println("               ENCRYPTION              ");
-            System.out.println("Encrypted message: " + cipherEncryption());
+        while (end ==0){
+            System.out.print("ENTER: ");
+            int choice = scanner.nextInt();
+            if (choice ==1){
+                System.out.println("               ENCRYPTION              ");
+                System.out.println("Encrypted message: " + cipherEncryption());
+                end =1;
 
-        } else if (choice==2) {
-            System.out.println("               DECRYPTION              ");
-            System.out.println("Decrypted Message: " + cipherDecryption());
+            } else if (choice==2) {
+                System.out.println("               DECRYPTION              ");
+                System.out.println("Decrypted Message: " + cipherDecryption());
+                end =1;
+            }
+            else {
+                System.out.println("            CHOICE IS INVALID          ");
+                System.out.println("              CHOOSE AGAIN!            ");
+                end=0;
+            }
         }
-        else {
-            System.out.println("            CHOICE IS INVALID          ");
-        }
+
+
 
 
     }
